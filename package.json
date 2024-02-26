@@ -1,15 +1,20 @@
 {
   "name": "template-elysia",
   "version": "1.0.50",
+  "module": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "start": "bun run --watch src/main.ts",
+    "lint": "biome lint ./src",
+    "format": "biome format ./src"
   },
   "dependencies": {
+    "@elysiajs/cors": "^0.8.0",
+    "@prisma/client": "^5.10.2",
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "@biomejs/biome": "1.5.3",
+    "bun-types": "latest",
+    "prisma": "^5.10.2"
+  }
 }
